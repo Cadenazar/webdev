@@ -27,7 +27,7 @@ def contact():
 
 @app.route("/Contact_result")
 
-def result():
+def Contact_result():
     return(render_template("Contact_result.html"))
 
 @app.route("/results")
