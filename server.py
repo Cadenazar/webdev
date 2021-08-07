@@ -25,6 +25,10 @@ def partselector():
 def contact():
     return(render_template("Contact.html"))
 
+@app.route("/Contact_result")
+
+def result():
+    return(render_template("Contact_result.html"))
 
 @app.route("/results")
 
