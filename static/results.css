@@ -1,0 +1,9 @@
+td{font-size: 30px;}
+#parent-li{width:70%;margin-left:auto;margin-right: auto;}
+header{margin-top: -50px;}
+
+@media screen and (max-width: 800px) {
+    td{font-size: 15px;}
+    th{font-size: 20px;padding:0}
+    #parent_li{width: 30%;margin-left:0px}
+}

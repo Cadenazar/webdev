@@ -1,0 +1,48 @@
+.name_label,.email_label,.reason_label{color: white;
+font-size: 30px;}
+
+.message_label{color: white;
+font-size: 30px;}
+
+.first_name{font-size: 25px;
+width: 30%;}
+
+.last_name{font-size: 25px;
+width: 30%;
+margin-left: 2%;}
+
+.email{margin-right: 2%;
+font-size: 25px;
+width: 60%;}
+
+.message{margin-top: 30px;
+vertical-align: middle;}
+
+.submit{
+margin-left: 60%;
+display: block;}
+
+.reason_select{margin-right: 2%;
+font-size: 25px;
+width: 60%;}
+
+.message_div{margin-right: 2%;
+width: 60%;}
+
+.name_div,.email_div,.reason_div,.message_div{margin-top: 5%;
+margin-left: auto;
+margin-right: auto;
+display: block;
+text-align: center;}
+
+@media screen and (max-width: 800px) {
+  .name_label,.email_label,.reason_label,.message_label{
+    font-size: 15px;
+  }
+  .email,.last_name,.first_name{font-size: 15px;}
+
+  .message{font-size: 20px;width: 100%;}
+
+  .reason_select{font-size: 15px;}
+
+}

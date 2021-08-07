@@ -1,0 +1,27 @@
+#budget,option,#usecase,#usecase_input{margin-left: -300%;
+font-family: 'Gowun Batang', serif;
+font-size: 25px;
+font-weight: 800;
+transition: 1s;
+width: 70%;
+color: white;}
+
+#budget_input{width:70%;
+background-color: #111;
+color:white;
+border:1px solid antiquewhite;}
+
+input[type='checkbox'] {margin-left: 2px;}
+#Overwatch-label,#CSGO-label,#Minecraft-label,#Witcher3-label,
+#Overwatch-logo,#CSGO-logo,#Minecraft-logo,#Witcher3-logo{
+margin-left: -300px;
+transition: 0.8s;
+color: white;
+}
+#infotext,#selector{margin-left: 5%;color: white;}
+
+#submit_new{margin-left: 5%;}
+
+select{background-color: #111;color:white;border:1px solid antiquewhite;}
+
+#heading{color: white}
