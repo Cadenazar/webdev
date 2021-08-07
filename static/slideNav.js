@@ -53,14 +53,14 @@ function detectMob() {
     var node1 = document.createElement("img")
     node1.setAttribute("style","height: 40px;width: 40px;margin-left: 10px")
     node1.setAttribute("src","https://www.pngkit.com/png/full/31-316559_white-home-icon-no-background.png")
-    node1.setAttribute("onclick",'location.href = "../Webdev assignment/Homepage.html"')
+    node1.setAttribute("onclick",'location.href = "/Homepage"')
     document.getElementById("menu_heading").appendChild(node1)
 
     destroy_element = document.getElementById("part_label")
     destroy_element.parentNode.removeChild(destroy_element)
     var node2 = document.createElement("img")
     node2.setAttribute("style","height: 40px;width: 40px;margin-left: 10px")
-    node2.setAttribute("onclick",'location.href = "../Webdev assignment/partselector.html"')
+    node2.setAttribute("onclick",'location.href = "/partselector"')
     node2.setAttribute("src","https://icon-library.com/images/wrench-icon-transparent/wrench-icon-transparent-14.jpg")
     document.getElementById("menu_heading").appendChild(node2)
     
@@ -69,7 +69,7 @@ function detectMob() {
     var node3 = document.createElement("img")
     node3.setAttribute("style","height: 40px;width: 40px;margin-left: 10px")
     node3.setAttribute("src","http://assets.stickpng.com/thumbs/5a452570546ddca7e1fcbc7d.png")
-    node3.setAttribute("onclick",'location.href = "../Webdev assignment/Contact.html"')
+    node3.setAttribute("onclick",'location.href = "/Contact"')
     document.getElementById("menu_heading").appendChild(node3)
     return("20%")    
   }
