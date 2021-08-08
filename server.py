@@ -5,15 +5,11 @@ import os
 
 app = Flask("__main__")
 
-@app.route("/")
+@app.route("/Homepage")
 
 def base_route():
   return(render_template("Homepage.html"))
 
-@app.route("/Homepage")
-
-def homepage():
-  return(render_template("Homepage.html"))
 
 @app.route("/partselector")
 
