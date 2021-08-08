@@ -76,5 +76,5 @@ function detectMob() {
   }
   else{return("30%")}
 }
-  )}
+  ), 50}
 transfer2 = detectMob()
