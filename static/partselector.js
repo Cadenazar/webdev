@@ -314,9 +314,9 @@ else{
    error.setAttribute("style","text-align: center;margin-right: auto;margin-left:;display:block;margin-top: 13%;color: white")
    error.innerText = "Pls enter your budget"
    button = document.createElement("button")
-   button.setAttribute("onclick","location.href='partselector.html'")
+   button.setAttribute("onclick","location.href='/partselector'")
    button.setAttribute("style","text-align: center;margin-right: auto;margin-left: auto;display:block;width: 10%;height: 30px")
-   error.innerHTML = "Pls enter your budget <br> budget should be lower than 6000 <br> and higher than 600"
+   error.innerHTML = "Pls enter your budget <br> budget should be lower than $6000 <br> and higher than $600"
    document.getElementById("parent-body").appendChild(error)
    document.getElementById("parent-body").appendChild(button)
 }
