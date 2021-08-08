@@ -3,7 +3,7 @@ var budget = localStorage.getItem("budget")
 var usecase = localStorage.getItem("usecase")
 var game_d_list = {"cpu":4,"gpu":6,"storage": 1};
 
-if(Number.isInteger(budget) == true || budget > 599){
+if(Number.isInteger(budget) == true || (budget > 600 && budget < 6000)){
 csgo = localStorage.getItem("CSGO")
 overwatch = localStorage.getItem("overwatch")
 witcher3 = localStorage.getItem("witcher3")
@@ -100,6 +100,7 @@ var count = 0
 for (var i in gamelst) {
   count = count + gamelst[i]
 }
+
 var extra = 0
 psu_price = budget
 for (i in psu_lst) {
@@ -108,6 +109,7 @@ for (i in psu_lst) {
     psu_budget2 = psu_lst[i][0]
   }
 }
+
 ram_price = budget
 for (i in ram_lst) {
   if ((parseInt(ram_price) > i)) {
@@ -115,7 +117,9 @@ for (i in ram_lst) {
     ram_budget2 = ram_lst[i][0]
   }
 }
+
 var point = parseInt(budget - psu_budget - ram_budget) / count //psu price
+
 storage_price = gamelst["storage"] * point
 for (i in storage_lst) {
   if ((storage_price > storage_lst[parseInt(i)][0])) {
@@ -123,25 +127,31 @@ for (i in storage_lst) {
     storage_budget2 = storage_lst[i][1]
   }
 }
-extra = parseInt(extra) + parseInt(storage_price) - storage_budget
+extra = parseInt(storage_price) - storage_budget
+
 cpu_price = (gamelst["cpu"] * point) + extra
+console.log(cpu_price)
 for (i in cpu_lst) {
-  if ((cpu_price > Object.keys(cpu_lst[i]))) {
-    (Object.keys(cpu_lst[i]))
+    console.log((parseInt(Object.keys(cpu_lst[i]))+parseInt(Object.keys(mobo_lst[Object.keys(cpu_lst[i])]))))
+  if ((cpu_price > (parseInt(Object.keys(cpu_lst[i]))+parseInt(Object.keys(mobo_lst[Object.keys(cpu_lst[i])]))))) {
     cpu_budget = Object.keys(cpu_lst[i])
     cpu_budget2 = Object.values(cpu_lst[i])
+    console.log(cpu_budget2)
     temp = i
   }
 }
-extra = parseInt(extra) + parseInt(cpu_price) - cpu_budget
-gpu_price = (gamelst["gpu"] * point) + extra - Object.keys(mobo_lst[cpu_budget])
+extra = parseInt(cpu_price) - cpu_budget - Object.keys(mobo_lst[cpu_budget])
+console.log(cpu_budget2)
+gpu_price = (gamelst["gpu"] * point) + extra
+console.log(gpu_price)
 for (i in gpu_lst) {
   if ((gpu_price > gpu_lst[parseInt(i)][0])) {
     gpu_budget = gpu_lst[i][0]
     gpu_budget2 = gpu_lst[i][1]
   }
 }
-extra = parseInt(extra) + parseInt(gpu_price) - gpu_budget -  Object.keys(mobo_lst[cpu_budget])
+extra =parseInt(gpu_price) - gpu_budget
+console.log(extra)
 if (parseInt(Object.keys(cpu_lst[temp])) < 160) {
   cpu_price = (gamelst["cpu"] * point) + extra
   for (i in cpu_lst) {
@@ -306,7 +316,7 @@ else{
    button = document.createElement("button")
    button.setAttribute("onclick","location.href='partselector.html'")
    button.setAttribute("style","text-align: center;margin-right: auto;margin-left: auto;display:block;width: 10%;height: 30px")
-   error.innerText = "Pls enter your budget"
+   error.innerHTML = "Pls enter your budget <br> budget should be lower than 6000 <br> and higher than 600"
    document.getElementById("parent-body").appendChild(error)
    document.getElementById("parent-body").appendChild(button)
 }
