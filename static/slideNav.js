@@ -46,6 +46,7 @@ function checkNav(){
 }
 
 function detectMob() {
+  setTimeout( function(){
   if ((window.innerWidth <= 480) && (window.innerHeight <= 854)){
     document.getElementById("menu_cog").style.marginTop = "-35px"
     destroy_element = document.getElementById("home_label")
@@ -75,4 +76,5 @@ function detectMob() {
   }
   else{return("30%")}
 }
+  )}
 transfer2 = detectMob()

@@ -1,9 +1,12 @@
-td{font-size: 30px;}
-#parent-li{width:70%;margin-left:auto;margin-right: auto;}
+td{font-size: 30px;color: white;padding-top: 30px;padding-bottom: 30px;}
+th{color: white;text-align: left;}
+#parent-li{width:70%;margin-left:auto;margin-right: auto;margin-top: 5%;}
 header{margin-top: -50px;}
 
 @media screen and (max-width: 800px) {
     td{font-size: 15px;}
     th{font-size: 20px;padding:0}
-    #parent_li{width: 30%;margin-left:0px}
+    #parent-li{width: 30%;margin-left:10%;}
+    #mobo_label{padding-right: 40px;}
+
 }
