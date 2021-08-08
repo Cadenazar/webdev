@@ -34,6 +34,7 @@
 
     info = document.createElement("h3")
     info.setAttribute("id","info")
+    info.setAttribute("style","color: white")
     info.innerHTML = "Thank you "+ localStorage.getItem("name_person") + " for sending us this form our review team will contact you again shortly";
     document.querySelector("#parent_legend").appendChild(info)
 
