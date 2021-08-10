@@ -8,11 +8,8 @@ function openNav() {
     document.getElementById("menu_cog").style.marginLeft = (document.getElementById("menu_heading").offsetWidth)+"px";
 
   }, 180);
-  document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
   try{
-  document.getElementById("budget_input").style.backgroundColor = "rgba(0,0,0,0.5)";
   document.getElementById("usecase_input").style.transition = "0s";
-  document.getElementById("usecase_input").style.backgroundColor = "rgba(0,0,0,0.5)";
   }
   catch{}
   return(true)
@@ -49,6 +46,11 @@ function detectMob() {
   setTimeout( function(){
   if ((window.innerWidth <= 480) && (window.innerHeight <= 854)){
     document.getElementById("menu_cog").style.marginTop = "-35px"
+    openNav()
+    setTimeout( function (){
+    
+      document.getElementById("menu_cog").setAttribute("style","display:none")
+      }, 1000);
     destroy_element = document.getElementById("home_label")
     destroy_element.parentNode.removeChild(destroy_element)
     var node1 = document.createElement("img")

@@ -10,7 +10,6 @@ function check_input() {
     legend_node.setAttribute("style", "padding-top: 1%;border: 1px solid white;width: 70%;padding-bottom: 1%;")
     legend_node.setAttribute("id", "partsgen")
     temp = document.getElementById("submit_new")
-    console.log(temp)
     document.getElementById("main_form").insertBefore(legend_node, temp)
 
     var node = document.createElement("input")
@@ -190,30 +189,26 @@ function check_input() {
 
 
     }
-    catch
-    {
-
+    catch{}
     }
-
     if (document.querySelector("#usecase_input").value == "Productivity") {
       var temp = document.getElementById("submit")
 
       var legend_node = document.createElement("legend")
-      legend_node.setAttribute("style", "padding-top: 1%;border: 1px solid black;width: 70%;padding-bottom: 1%;")
-      legend_node.setAttribute("id", "partsgen")
+      legend_node.setAttribute("style", "padding-top: 1%;border: 1px solid white;width: 70%;padding-bottom: 1%;")
+      legend_node.setAttribute("id", "partsgen2")
       temp = document.getElementById("submit_new")
-      console.log(temp)
       document.getElementById("main_form").insertBefore(legend_node, temp)
 
 
       var info2 = document.createElement("h4")
       info2.setAttribute("id", "infotext")
       info2.innerHTML = "What kind of production software do you use?"
-      document.getElementById("partsgen").appendChild(info2)
+      document.getElementById("partsgen2").appendChild(info2)
 
       var selector = document.createElement("select")
       selector.setAttribute("id", "selector")
-      document.getElementById("partsgen").appendChild(selector)
+      document.getElementById("partsgen2").appendChild(selector)
 
       var option1 = document.createElement("option")
       option1.innerHTML = "3D rendering"
@@ -228,12 +223,24 @@ function check_input() {
       var space5 = document.createElement("br")
       space5.setAttribute("id", "space5")
       temp = document.getElementById("submit")
-      document.getElementById("partsgen").appendChild(space5)
+      document.getElementById("partsgen2").appendChild(space5)
 
 
     }
+    else if(document.querySelector("#usecase_input").value != "Productivity")
+    {
+      try{
+      var destroyElement = document.getElementById("partsgen2")
+      destroyElement.parentNode.removeChild(destroyElement) 
+      var destroyElement = document.getElementById("selector")
+      destroyElement.parentNode.removeChild(destroyElement)
+  
+      var destroyElement = document.getElementById("infotext")
+      destroyElement.parentNode.removeChild(destroyElement)
+    }
+    catch{}
   }
-}
+  }
 function getvalue() {
   localStorage.setItem("usecase", document.getElementById("usecase_input").value);
   localStorage.setItem("budget", document.getElementById("budget_input").value);
